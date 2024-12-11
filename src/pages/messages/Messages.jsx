@@ -1,79 +1,79 @@
-import React from 'react'
-import './messages.scss'
-import { Link } from 'react-router-dom';
-const Messages = () => {
-  const currentUser = {
-    id: 1,
-    username: "Halima",
-    isSeller: true,
+import React from 'react';
+import './messages.scss';
+import { useNavigate } from 'react-router-dom';
+
+const Home = () => {
+  const navigate = useNavigate();
+
+  const repairers = [
+    {
+      id: 1,
+      name: 'Ali Réparateur',
+      description: 'Spécialiste en réparation de smartphones et tablettes.',
+      rating: 4.5,
+      image: 'https://img.freepik.com/photos-gratuite/portrait-du-pere-dans-son-jardin_23-2149489567.jpg',
+    },
+    {
+      id: 2,
+      name: 'Fatou Technicienne',
+      description: 'Réparation d’ordinateurs et optimisation de performance.',
+      rating: 4.8,
+      image: 'https://via.placeholder.com/150',
+    },
+    {
+      id: 3,
+      name: 'Oumar Expert',
+      description: 'Réparation d’appareils électroménagers.',
+      rating: 4.2,
+      image: 'https://www.diouda.fr/cdn/shop/files/meilleur-soins-homme-peau-noire-metisse-mobile.webp?v=1651584405&width=980',
+    },
+  ];
+
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      stars.push(
+        <span key={i} className={i <= Math.floor(rating) ? 'star filled' : 'star'}>
+          ★
+        </span>
+      );
+    }
+    return stars;
   };
 
-  const message = `Mon ordinateur est tombé en panne et je dois absolument le faire réparer avant demain..`;
+  const handleCardClick = (id) => {
+    navigate(`/gig/${id}`); // Redirige vers la page gig avec l'ID du réparateur
+  };
+
   return (
-    <div className="messages">
-      <div className="container">
-        <div className="title">
-          <h1>Messages</h1>
+    <div className="home">
+      <header className="home-header">
+        <h1>Bienvenue sur Allo-Fix</h1>
+        <div className="search-bar">
+          <input type="text" placeholder="Recherchez un réparateur..." />
+          <button>Rechercher</button>
         </div>
-        <table>
-          <tr>
-            <th>{currentUser.isSeller ? "Client" : "Seller"}</th>
-            <th>Dernier Message</th>
-            <th>Date</th>
-            <th>Action</th>
-          </tr>
-          <tr className="active">
-            <td>Youness Hakimi</td>
-            <td>
-              <Link to="/message/123" className="link">
-                {message.substring(0, 100)}...
-              </Link>
-            </td>
-            <td>il y a 1 heure</td>
-            <td>
-              <button>Marquer comme lu</button>
-            </td>
-          </tr>
-          <tr className="active">
-            <td>Ali Kassimi</td>
-
-            <td>
-              <Link to="/message/123" className="link">
-                {message.substring(0, 100)}...
-              </Link>
-            </td>
-            <td>il y a 2 heures</td>
-            <td>
-              <button>Marquer comme lu</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Amin Nassim</td>
-            <td>
-              <Link to="/message/123" className="link">
-                {message.substring(0, 100)}...
-              </Link>
-            </td>
-            <td>il y a 1 jour</td>
-          </tr>
-          <tr>
-            <td>Said kasbi </td>
-            <td>
-              <Link to="/message/123" className="link">
-                {message.substring(0, 100)}...
-              </Link>
-            </td>
-            <td>il y a 2 jours</td>
-          </tr>
-          <tr>
-            <td>Khadija abili</td>
-            <td>{message.substring(0, 100)}</td>
-            <td>il y a 1 semaine</td>
-          </tr>
-        </table>
-      </div>
+      </header>
+      <section className="repairers">
+        <h2>Nos Réparateurs</h2>
+        <div className="repairer-list">
+          {repairers.map((repairer) => (
+            <div
+              key={repairer.id}
+              className="repairer-card"
+              onClick={() => handleCardClick(repairer.id)} // Ajout du gestionnaire de clic
+              style={{ cursor: 'pointer' }}
+            >
+              <img src={repairer.image} alt={repairer.name} />
+              <h3>{repairer.name}</h3>
+              <p>{repairer.description}</p>
+              <div className="rating">{renderStars(repairer.rating)}</div>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
-  )
-}
+  );
+};
 
-export default Messages
+export default Home;
