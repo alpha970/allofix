@@ -1,5 +1,6 @@
 import React from 'react'
 import { Slider } from "infinite-react-carousel/lib";
+import { Link } from 'react-router-dom';
 import './Gig.scss'
 const DGig = () => {
   return (
@@ -167,9 +168,9 @@ const DGig = () => {
         </div>
         <div className="right">
         <div className="contact-icons">
-  <a href="/messages">
-    <i className="fas fa-envelope"></i>
-  </a>
+        <Link to="/messages">
+        <i className="fas fa-envelope"></i>
+      </Link>
   <a href="tel:+1234567890">
     <i className="fas fa-phone"></i>
   </a>
