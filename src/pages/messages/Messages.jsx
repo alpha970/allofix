@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Messages.scss';
+import './messages.scss';
 
 const Messages = () => {
     // Liste d'exemple des contacts et messages. Remplacez par vos données réelles.
