@@ -10,7 +10,7 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     // Pour l'instant, redirection automatique vers /messages
-    navigate('/messages');
+    navigate('/dashboard');
   };
 
   return (
@@ -48,8 +48,8 @@ const Login = () => {
           </button>
         </form>
         <div className="login-links">
-          <Link to="/login">Mot de passe oublié ?</Link>
-          <Link to="/login">Créer un compte</Link>
+          <Link to="/resetpassword">Mot de passe oublié ?</Link>
+          <Link to="/register">Créer un compte</Link>
         </div>
       </div>
     </div>

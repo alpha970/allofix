@@ -1,0 +1,70 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    position: relative; /* Ajouté pour positionner le logo */
+    
+  }
+  .logo-background {
+    position: absolute;
+    top: 10px; /* Ajustez la position selon vos besoins */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: #1b242d; /* Couleur de votre logo */
+    letter-spacing: 2px;
+  }
+  .login-container {
+
+    background-color: white;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -2px;
+    gap: 30px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    padding: 10px; /* Augmenté pour un confort visuel */
+    margin-bottom: 6px; /* Ajouté pour plus d'espace entre les champs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button.login-button {
+    padding: 10px;
+    align-items: center;
+    background-color: #1db753;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  button.login-button:hover {
+    background-color: #188a42;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2px;
+    margin-bottom: 2px;
+  }
+  

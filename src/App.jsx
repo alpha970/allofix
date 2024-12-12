@@ -3,10 +3,15 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 import './App.css'
 import Register from './pages/register/Register';
 import Login from './pages/login/Login';
+import ResetPass from './pages/resetpassword/ResetPass';
+import Dashboard from './pages/dashboad/dashboad';
+import DGig from './pages/dashboad/gig/Gig';
 import Gig from './pages/gig/Gig';
 import Add from './pages/add/Add';
 import Message from './pages/message/Message';
+import Profile from './pages/profile/Profile';
 import Messages from './pages/messages/Messages';
+import Services from './pages/services/Services';
 import Orders from './pages/orders/Orders';
 import Gigs from './pages/gigs/Gigs';
 import Home from './pages/home/Home';
@@ -44,12 +49,24 @@ function App() {
         },
         
         {
+          path: "/services",
+          element: <Services />,
+        },
+        {
           path: "/orders",
           element: <Orders />,
         },
         {
           path: "/messages",
           element: <Messages />,
+        },
+        {
+          path: "/dashboard",
+          element: <Dashboard />,
+        },
+        {
+          path: "/profile",
+          element: <Profile />,
         },
         {
           path: "/message/:id",
@@ -63,6 +80,10 @@ function App() {
           path: "/gig/:id",
           element: <Gig />,
         },
+        {
+          path: "/dashboard/gig/:id",
+          element: <DGig />,
+        },
       ]
     },
     {
@@ -72,6 +93,10 @@ function App() {
     {
       path: "/login",
       element: <Login />,
+    },
+    {
+      path: "/resetpassword",
+      element: <ResetPass />,
     },
   ])
   return <RouterProvider router={router} />;

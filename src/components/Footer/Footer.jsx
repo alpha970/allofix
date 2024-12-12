@@ -1,6 +1,18 @@
-import React from 'react'
-import './footer.scss'
+import React from 'react';
+import { useLocation } from 'react-router-dom'; // Importer useLocation
+import './footer.scss';
+
 const Footer = () => {
+  const location = useLocation();
+
+  // Liste des chemins où le footer doit être caché
+  const hiddenPaths = ['/dashboard', '/messages', '/gig', '/profile','/orders'];
+
+  // Vérifie si le chemin actuel correspond à l'un des chemins à cacher
+  if (hiddenPaths.includes(location.pathname)) {
+    return null; // Ne rien afficher
+  }
+
   return (
     <div className="footer">
       <div className="container">
@@ -10,7 +22,6 @@ const Footer = () => {
             <span>Qui sommes nous ?</span>
             <span>Charte Qualité</span>
             <span>Contact</span>
-            
           </div>
           <div className="item">
             <h2>Nos prestations</h2>
@@ -25,21 +36,18 @@ const Footer = () => {
             <h2>Vos demandes</h2>
             <span>Suivez votre demande </span>
             <span>FAQ</span>
-            
           </div>
           <div className="item">
             <h2>Recrutement</h2>
             <span>Rejoignez le réseau Artisan</span>
             <span>Travaillez chez Allo-Fix</span>
-            
           </div>
-          
         </div>
         <hr />
         <div className="bottom">
           <div className="left">
             <h2>Allo-Fix</h2>
-            <span> Copyright© 2024 Allo-Fix - Tous droits réservés  </span>
+            <span> Copyright© 2024 Allo-Fix - Tous droits réservés </span>
           </div>
           <div className="right">
             <div className="social">
@@ -62,7 +70,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

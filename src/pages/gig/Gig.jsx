@@ -11,10 +11,10 @@ const Gig = () => {
           <div className="user">
             <img
               className="pp"
-              src="https://images.pexels.com/photos/720327/pexels-photo-720327.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/98CC/production/_131761193_1f064d43-afea-4dd9-8743-57e979a4b18b.jpg.webp"
               alt=""
             />
-            <span>Hiba Kasbi</span>
+            <span>Youssef Chraibi</span>
             <div className="stars">
               <img src="/img/star.png" alt="" />
               <img src="/img/star.png" alt="" />
@@ -167,8 +167,8 @@ const Gig = () => {
         </div>
         <div className="right">
           <div className="price">
-            <h3>Réparation électronique</h3>
-            <h2> 199.99 Dh</h2>
+            <h3> Prix moyen  de réparation</h3>
+            <h2> 249.99 Dh</h2>
           </div>
           <p>
           Je répare vos équipements électriques rapidement et efficacement

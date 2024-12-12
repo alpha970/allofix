@@ -75,7 +75,7 @@ const Home = () => {
             <ReactPlayer
               url="https://www.youtube.com/watch?v=CB_0kuO315Y"
               controls
-              playing={true}
+              playing={false}
               config={{
                 youtube: {
                   playerVars: { start: 0, end: 20 },
