@@ -1,6 +1,6 @@
 import React from 'react'
 import { Slider } from "infinite-react-carousel/lib";
-import './gig.scss'
+import './Gig.scss'
 const DGig = () => {
   return (
     <div className="gig">
