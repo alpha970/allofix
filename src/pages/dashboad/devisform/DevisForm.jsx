@@ -15,10 +15,10 @@ const QuoteRequest = () => {
       const audio = new Audio('/notif.mp3'); // Remplacez par le chemin de votre fichier audio
       audio.play();
       setIsSubmitted(false); // Réinitialiser après 35 secondes
-    }, 30000); // 60 000 ms = 1 minute
+    }, 35000); // 60 000 ms = 1 minute
     
     // Réinitialiser l'état de soumission après 35 secondes
-    setTimeout(() => setIsSubmitted(false), 35000); // Réinitialiser après 35 secondes
+    setTimeout(() => setIsSubmitted(false), 60000); // Réinitialiser après 35 secondes
   };
 
   return (

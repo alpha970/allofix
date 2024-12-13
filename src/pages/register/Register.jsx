@@ -9,6 +9,7 @@ const Register = () => {
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [userType, setUserType] = useState('client'); // Par défaut : client
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -19,7 +20,7 @@ const Register = () => {
     }
 
     // Simulation de la logique d'enregistrement
-    alert(`Compte créé avec succès pour ${firstName} ${lastName}`);
+    alert(`Compte créé avec succès pour ${firstName} ${lastName} en tant que ${userType}`);
   };
 
   return (
@@ -28,11 +29,9 @@ const Register = () => {
         <span className="logo-text">Allo-Fix</span>
       </div>
       <div className="login-container">
-       
         <form onSubmit={handleRegister}>
-        <h2>Créer un compte</h2>
+          <h2>Créer un compte</h2>
           <div className="form-group">
-
             <input
               type="text"
               id="firstName"
@@ -43,7 +42,6 @@ const Register = () => {
             />
           </div>
           <div className="form-group">
-            
             <input
               type="text"
               id="lastName"
@@ -54,7 +52,6 @@ const Register = () => {
             />
           </div>
           <div className="form-group">
-            
             <input
               type="email"
               id="email"
@@ -65,7 +62,6 @@ const Register = () => {
             />
           </div>
           <div className="form-group">
-            
             <input
               type="tel"
               id="phone"
@@ -76,7 +72,6 @@ const Register = () => {
             />
           </div>
           <div className="form-group">
-           
             <input
               type="password"
               id="password"
@@ -87,7 +82,6 @@ const Register = () => {
             />
           </div>
           <div className="form-group">
-            
             <input
               type="password"
               id="confirmPassword"
@@ -96,6 +90,31 @@ const Register = () => {
               placeholder="Confirmez votre mot de passe"
               required
             />
+          </div>
+          <div className="form-group">
+            <label>Type d'utilisateur :</label>
+            <div>
+              <label>
+                <input
+                  type="radio"
+                  name="userType"
+                  value="client"
+                  checked={userType === 'client'}
+                  onChange={(e) => setUserType(e.target.value)}
+                />
+                Client
+              </label>
+              <label style={{ marginLeft: '10px' }}>
+                <input
+                  type="radio"
+                  name="userType"
+                  value="reparateur"
+                  checked={userType === 'reparateur'}
+                  onChange={(e) => setUserType(e.target.value)}
+                />
+                Réparateur
+              </label>
+            </div>
           </div>
           <button type="submit" className="login-button">
             S'inscrire
