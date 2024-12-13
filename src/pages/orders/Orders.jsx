@@ -20,15 +20,7 @@ const Orders = () => {
     {
       image: "https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600",
       title: "Réparation d'écran de tablette",
-      price: 300,
-      client: "Anas Hakimi",
-      state: "En attente",
-      date: "2024-12-13",
-      address: "123 Rue Casablanca, Maroc",  // Nouvelle adresse
-    },
-    {
-      image: "https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      title: "Remplacement d'écran de téléphone mobile",
+      price: 300,(($'ee^''ee ))      title: "Remplacement d'écran de téléphone mobile",
       price: 199.99,
       client: "Amina Allaoui",
       state: "Terminé",

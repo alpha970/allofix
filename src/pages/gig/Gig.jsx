@@ -192,7 +192,7 @@ const Gig = () => {
               <span>Additional design</span>
             </div>
           </div>
-          <button>Demander un devis</button>
+         
         </div>
       </div>
     </div>
