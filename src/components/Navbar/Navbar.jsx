@@ -21,7 +21,7 @@ const Navbar = () => {
             <div className="container">
                 <Link to="/" style={{ textDecoration: 'none', color: active || pathname !== "/" ? 'white' : 'white' }}>
                     <div className="logo">
-                        <span className="text">Allo-Fix</span>
+                        <span className="text">AlloFix</span>
                         <span className="dot">.</span>
                     </div>
                 </Link>
@@ -35,7 +35,7 @@ const Navbar = () => {
 
                 {/* Links pour les autres pages */}
                 <div className={`links ${menuOpen ? 'open' : ''}`}>
-                    {pathname === "/dashboard" || pathname === "/messages"  || pathname === "/profile"|| pathname === "/orders"|| pathname.startsWith('/dashboard/gig/') ? (
+                    {pathname === "/dashboard" || pathname === "/messages"  || pathname === "/profile"|| pathname === "/orders"|| pathname.startsWith('/dashboard/') ? (
                         // Affichage des icônes home, user et message
                         <>
                             <span onClick={() => navigate('/dashboard')} className="icon home-icon">

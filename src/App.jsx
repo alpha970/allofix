@@ -6,6 +6,7 @@ import Login from './pages/login/Login';
 import ResetPass from './pages/resetpassword/ResetPass';
 import Dashboard from './pages/dashboad/dashboad';
 import DGig from './pages/dashboad/gig/Gig';
+import QuoteRequest from './pages/dashboad/devisform/DevisForm';
 import Gig from './pages/gig/Gig';
 import Add from './pages/add/Add';
 import Message from './pages/message/Message';
@@ -83,6 +84,10 @@ function App() {
         {
           path: "/dashboard/gig/:id",
           element: <DGig />,
+        },
+        {
+          path: "/dashboard/devisform",
+          element: <QuoteRequest />,
         },
       ]
     },

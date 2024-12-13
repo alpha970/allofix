@@ -28,7 +28,7 @@ const Dashboard = () => {
       id: 3,
       img: "https://highservice.ma/wp-content/uploads/2024/02/reparation-electronique-indusrtrielle-.jpg",
       pp: "https://images.pexels.com/photos/1062280/pexels-photo-1062280.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      desc: "Je réparerai votre console de jeux pour que vous puissiez jouer sans interruption",
+      desc: "Avec plus de 5 ans d'expérience dans la réparation de smartphones",
       price: "150 à 400",
       star: 5,
       username: "Omar Bouzid",
@@ -90,7 +90,7 @@ const Dashboard = () => {
   return (
     <div className="home">
       <header className="home-header">
-        <h1>Bienvenue sur Allo-Fix</h1>
+        <h1>Bienvenue sur AlloFix</h1>
         <div className="search-bar">
           <input type="text" placeholder="Recherchez un réparateur..." />
           <button>Rechercher</button>

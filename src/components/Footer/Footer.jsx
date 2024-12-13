@@ -6,7 +6,7 @@ const Footer = () => {
   const location = useLocation();
 
   // Liste des chemins où le footer doit être caché
-  const hiddenPaths = ['/dashboard', '/messages', '/gig', '/profile','/orders'];
+  const hiddenPaths = ['/dashboard', '/dashboard/gig/', '/dashboard/devisform','/messages', '/gig', '/profile','/orders'];
 
   // Vérifie si le chemin actuel correspond à l'un des chemins à cacher
   if (hiddenPaths.includes(location.pathname)) {

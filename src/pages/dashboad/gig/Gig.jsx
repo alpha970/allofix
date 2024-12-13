@@ -171,12 +171,7 @@ const DGig = () => {
         <Link to="/messages">
         <i className="fas fa-envelope"></i>
       </Link>
-  <a href="tel:+1234567890">
-    <i className="fas fa-phone"></i>
-  </a>
-  <a href="https://wa.me/+1234567890">
-    <i className="fab fa-whatsapp"></i>
-  </a>
+ 
 </div>
 
   <div className="price">
@@ -202,7 +197,9 @@ const DGig = () => {
       <span>Additional design</span>
     </div>
   </div>
+  <Link to="/dashboard/devisform">
   <button>Demander un devis</button>
+</Link>
 </div>
 
       </div>
