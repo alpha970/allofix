@@ -59,7 +59,7 @@ const Orders = () => {
       price: 450,
       client: "Omar Bennis",
       state: "Terminé",
-      date: "2023-03-14",
+      date: "2023-03-15",
       address: "202 Rue Agadir, Maroc",  // Nouvelle adresse
     },
   ]);
@@ -71,7 +71,7 @@ const Orders = () => {
           order.state === "En attente" ? { ...order, state: "Validé" } : order
         )
       );
-    }, 30000);
+    }, 20000);
 
     return () => clearTimeout(timer);
   }, []);

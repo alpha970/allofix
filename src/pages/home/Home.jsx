@@ -33,7 +33,7 @@ const Home = () => {
     { id: 17, name: 'Réparateur Q', lat: 33.5697, lng: -7.6014, description: 'Maintenance industrielle' },
     { id: 18, name: 'Réparateur R', lat: 33.5811, lng: -7.6269, description: 'Réparation & dépannage' },
     { id: 19, name: 'Réparateur S', lat: 33.5982, lng: -7.6357, description: 'Audits & diagnostics' },
-    { id: 20, name: 'Réparateur T', lat: 33.5701, lng: -7.6025, description: 'Câblage & raccordement' },
+   
   ];
 
   return (
@@ -49,7 +49,7 @@ const Home = () => {
       <div className="features">
         <div className="container">
           <div className="item">
-            <h1>Votre expert en électrotechnique, en un clic.</h1>
+            <h1>Votre expert en électrotechnique  en un clic.</h1>
             <div className="title">
               <img src="./img/check.png" alt="" />
               Des solutions sur mesure
